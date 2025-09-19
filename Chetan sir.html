@@ -1,0 +1,393 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Profile - Dr. Chethan Chandra S Basavaraddi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: gold;
+      padding: 10px;
+    }
+
+    .header .logo {
+      width: 80px; 
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .header-text h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    /* Faculty Profile Card */
+    .faculty-container {
+      max-width: 1000px;
+      background: #fff;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 20px;
+    }
+
+    .faculty-photo {
+      flex: 1;
+      max-width: 250px;
+    }
+
+    .faculty-photo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .faculty-details {
+      flex: 2;
+    }
+
+    .faculty-details h2 {
+      margin: 0;
+      font-size: 26px;
+      color: #333;
+    }
+
+    .faculty-details h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .faculty-details p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .faculty-contact {
+      margin-top: 15px;
+      padding: 10px;
+      background: #fafafa;
+      border-left: 4px solid gold;
+      border-radius: 6px;
+    }
+
+    .faculty-contact p {
+      margin: 5px 0;
+    }
+
+    /* Section titles */
+    .section-title {
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid gold;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    ul {
+      margin: 5px 0 15px 20px;
+    }
+
+    /* Hidden content */
+    #papersList {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f9f9f9;
+      border-left: 4px solid #4CAF50;
+      border-radius: 6px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .toggle-btn {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header"> 
+    <img src="CSE logo (2).png" alt="CSE Logo" class="logo">
+    <div class="header-text">
+      <h1>Computer Science and Engineering</h1>
+      <h2>GM University, Davangere</h2>
+    </div>
+  </div>
+
+  <!-- Faculty Profile -->
+  <div class="faculty-container">
+    <div class="faculty-photo">
+      <img src="chetan sir.jpg" alt="Faculty Photo">
+    </div>
+
+    <div class="faculty-details">
+      <h2>Dr. Chethan Chandra S Basavaraddi</h2>
+      <h3>Associate Professor | Researcher | Innovator | Mentor</h3>
+      <p>
+        📍 Dept. of CSE, School of CS&T, Faculty of Engineering & Technology, 
+        G M University, Davanagere – 577006
+      </p>
+
+      <div class="faculty-contact">
+        <p><strong>Phone:</strong> +91 98445 08359</p>
+        <p><strong>Email:</strong> chethanchandrasb.cse@gmu.ac.in</p>
+        <p><strong>Profiles:</strong> LinkedIn | ResearchGate | Google Scholar</p>
+      </div>
+
+      <h3 class="section-title">Academic Qualifications</h3>
+      <ul>
+        <li>D.Litt., Dr. S. Radhakrishnan Research & Development Center – 2017</li>
+        <li>Ph.D. (CSE), NEFTU, Arunachal Pradesh – 2020</li>
+        <li>M.Tech (CSE), Davangere University, UBDTCE – 2012 (CGPA 7.86)</li>
+        <li>B.E. (CSE), VTU – 2010</li>
+        <li>B.Ed., Tumkur University – 2023 (80%, FCD)</li>
+        <li>Karnataka State Eligibility Test (K-SET) – 2023</li>
+      </ul>
+
+      <h3 class="section-title">Achievements & Recognition</h3>
+      <ul>
+        <li>Patent Holder: IoT-based Doctor Robot for Telemedicine (2024)</li>
+        <li>Awards: Best Teacher (2021), Best Faculty (2021), Young Scientist (2022), India Prime Icon (2022)</li>
+        <li>Publications: 49+ research papers (IEEE, Scopus, UGC, Journals & Conferences)</li>
+        <li class="toggle-btn" onclick="togglePapers()">Workshops/Conferences Attended: 74+</li>
+        <div id="papersList">
+          <h4>PAPER’S PRESENTED:</h4>
+          <ol>
+            <li>Mr. Chethan Chandra s basavaraddi, “Performance Evaluation Of Mesh And
+Position Based Hybrid Routing In MANETs”, IrnetrdInternational Conference On
+Computer Science and Engineering(ICCSE)-February 3 , 2012- Nagpur, ISBN-978-
+93-81693-17-9.</li>
+            <li>Mr. Chethan Chandra s basavaraddi, “Current Project Work on Routing Protocols for
+MANET: A Literature Survey”, Irnet International Conference On Computer
+Science and Informatics(ICCSI)-March 9
+th
+, 2012- Hyderabad, ISBN-978-93-81693-25-4</li>
+            <li>Mr. Chethan Chandra S Basavaraddi,” A New Routing Algorithm in MANETS: Location Aided
+Hybrid Routing”, Int.J. Computer Technology & Applications, Vol 3 (2), 760-765 760 ISSN:2229-6093.</li>
+          <li> Mr. Chethan Chandra S Basavaraddi, ”Performance Analysis of Mesh and Position
+Based Hybrid Routing In MANETS: A Comprehensive Study”, Chethan ChandraS
+Basavaraddi et al., ,Int.J. Computer Technology & Applications, Vol 3 (2), 804-812
+804ISSN:2229-6093. </li> 
+<li> Mr. Chethan Chandra S Basavaraddi, “A Comparative Analysis Of Two Position Based
+Hybrid Routing Algorithms Over MANETs”, /International Journal Of Computational
+Engineering Research / ISSN: 2250–3005 IJCER | Mar-Apr 2012 | Vol. 2 | Issue No.2 |540-
+546 Page 540</li>
+<li>Mr. Chethan Chandra S Basavaraddi, “Current Project Work On Routing Protocols
+for MANET: A Literature Survey”, International Journal of Scientific and
+Engineering Research (IJSER) - Volume 3, Issue 5, May 2012 (ISSN 2229-5518). </li>
+<li>Mr. Chethan Chandra S Basavaraddi, “Performance Evaluation Of Mesh And
+Position Based Hybrid Routing In MANETs”, International Journal of Scientific
+and Engineering Research (IJSER) - Volume 3, Issue 5, May 2012 (ISSN 2229-5518). </li>
+<li>Mr. Chethan Chandra S Basavaraddi,.” A Comparative Performance Analysis Of
+Two Position Based Hybrid Routing Algorithms Under Mobility Speed Over
+Manets”, ”International Conference On Recent Trends In Computer Science And Engg.
+(Icrtcse 2012) held at May 3rd &4th 2012. Apollo Engineering College Sriperumbudur,
+Kanchipuram – 602105. Tamil Nadu, South India. </li>
+<li> Mr. Chethan Chandra S Basavaraddi,” A Stable Route Selection in PBHRA for
+MANETs”, National conference Advances in Electronics & communication
+Technology(NCAECT 2012) May 18th, 2012. Dept of Studies and Research in
+Electronics Kuvempu University, Shankaraghatta-577451 Shimoga Dist, Karnataka.</li>
+<li> Mr. Chethan Chandra S Basavaraddi,” A PBHRA IN MANETs”, National conference
+on Emerging Mobile Technologies And Policies (NCEMTP-2012) 28th May 2012 to 30th
+May 2012. Organized by Department of Telecommunication Engineering, M.S. RAMAIAH
+INSTITUTE OFTECNOLOGY, Bangalore-560054.</li>
+<li> . Mr. Chethan Chandra S Basavaraddi, “A Comparative Analysis Of Two Position
+Based Hybrid Routing Algorithms Under Mobility Speed Over MANETs”,
+International Journal of Research and Innovation in Computer Engineering, ISSN 2249-
+6580, Vol 2, Issue 3, June 2012, (285-291).</li>
+<li>Mr. Chethan Chandra S Basavaraddi, “MANETs Application on Environment”,
+UGC sponsored National conference on Perspectives of Physics in Reducing
+Environmental Pollution, Kalpataru First Grade Science College, Feb 2014, Tiptur-
+572002. </li>
+<li> Mr. Chethan Chandra S Basavaraddi, “How hard is English – Kannada Machine
+Translation”, International seminar on Computational linguistics on Indian
+Languages, held by CDAC,IIIT-Trivandrum& Kerala university, Thrivandrum, feb-2014.</li>
+<li> Mr. Chethan Chandra S Basavaraddi, “A Typical Machine Translation System for
+English to Kannada”, International Journal of Scientific & Engineering Research,
+Volume 5, Issue 4, April-2014, ISSN 2229-5518.</li>
+<li> Mr. Chethan Chandra S Basavaraddi, “Current Project Work on English
+to Kannada Machine Translation System: a Literature Survey on NLP”,
+Int.J.Computer Technology &Applications,Vol 5 (3),1254-1275,2014.</li>
+<li> Mr. Chethan Chandra S Basavaraddi, “Simultaneous Prediction of Stock Market
+Investments by Analyzing Sentiments: A Supervised Joint Aspect Model”,
+NCETSE2018. </li>
+<li> Mr. Chethan Chandra S Basavaraddi, ”Privacy policy controlling for OSN users” ISSN
+(Online):2347-2820, Volume -4, Issue-8, 2016, International Journal of Electrical, Electronics
+and Computer Systems (IJEECS). </li>
+<li>Mr. Chethan Chandra S Basavaraddi, “Single Hop Cryptographic Server Based Data Sharing
+in Cloud” ISSN (Online): 2347-2820, Volume -4, Issue-8, 2016, International Journal of
+Electrical, Electronics and Computer Systems (IJEECS). </li>
+<li> Mr. Chethan Chandra S Basavaraddi, “Hybrid Neuro Fuzzy Network Applied to Face
+Recognition from Ocluded Images”, International Archive of Applied Sciences and Technology
+Int. Arch. App. Sci. Technol; Vol 10 [2] June 2019 : 222-235 © 2019 Society ofEducation, India
+[ISO9001: 2008 Certified Organization], www.soeagra.com/iaast.html, DOI:
+.10.15515/iaast.0976-4828.10.2.222235.</li>
+<li> Mr. Chethan Chandra S Basavaraddi, “Object Tracking Using Hybrid Neuro Fuzzy
+Network Applied to Face Recognition with Image Samples” International Journal of New
+Innovations in Engineering and Technology, Volume 11 Issue 4 September 2019, ISSN: 2319-
+6319.</li>
+<li>Mr. Chethan Chandra S Basavaraddi, “Face Recognition Using Hybrid Neuro Fuzzy
+Network for Occluded Images”, International Journal of Science and Research (IJSR),2020,
+ISSN: 2319-7064, ResearchGate Impact Factor (2018): 0.28 | SJIF (2019): 7.583. </li>
+<li>Dr. Chethan Chandra S Basavaraddi, “Face Recognition from Feed Forward Neural
+Network for Occluded Images Using Hybrid Neuro Fuzzy Network”, International
+conference on Recent Advancements in Wireless Communications, Signal and Image Processin
+(ICWCSIP 2020), Organized byChenniInstitute of Technology, from29th
+-30th June, 2020. </li>
+<li>Dr. Chethan Chandra S Basavaraddi, “FACE RECOGNITION FROM FEED FORWARD NEURAL
+NETWORK USING OCCLUDED IMAGES FOR AUTOMATING THE SURVEILLANCEUSING
+HYBRID NEURO FUZZY NETWORK”, International Journal of Engineering AppliedSciences and
+Technology, 2020 Vol. 5, Issue 2, ISSN No. 2455-2143, Pages 508-519 PublishedOnline June
+2020 in IJEAST (http://www.ijeast.com). </li>
+<li>Dr. Chethan Chandra S Basavaraddi, “Multiple Object Tracking Using Hybrid Neuro Fuzzy
+Network Applied to Face Recognition from Feed Forward Neural Network”, International
+Journal of Advanced Research in Computer and Communication Engineering Vol. 9, Issue 7,
+July 2020, DOI 10.17148/IJARCCE.2020.9707, ISSN (Online) 2278-1021 ISSN (Print) 2319-
+5940. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Deep Affinity to Multiple Object Tracking Using
+Hybrid Neuro Fuzzy Network Applied to Face Recognition”, Journal of Seybold Report,
+VOLUME 15 ISSUE 8 2020 ,ISSN NO: 1533-9211. </li> 
+<li> Dr. Chethan Chandra S Basavaraddi, “Deep Learning Based Multiple Object Tracking
+for Facial Images Using Hybrid Neuro Fuzzy Network”, International Journal of
+Scientific & Engineering Research Volume 11, Issue 8, August-2020 1096 ISSN 2229-5518. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Machine learning based recommendation system on
+movie reviews using KNN classifiers”, ICACSE 2020 Journal of Physics: Conference Series 1964
+(2021) 042081 IOP Publishing doi:10.1088/1742-6596/1964/4/042081. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Implementation of Client-Side Deduplication of
+Encrypted Data with Public Auditing in Cloud Storage”,
+http://www.ijniet.org/issues/volume-17-issue-2-july-2021, ISSN: 2319-6319. UGC Approved
+Journal-47645 Impact factor - 4.012. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Applying Artificial Intelligence to Studies on
+Water Quality and Phytoplankton Diversity of Eachnur Tank, Tiptur, Tumkur
+District, Karnataka, India”, International Journal of New Innovations in Engineering and
+Technology, Volume 17 Issue 3 August 2021, ISSN: 2319-6319. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Using Machine Learning Techniques Studies on
+Water Quality Index and Phytoplankton Diversity of Tiptur Lake, Tiptur, Tumkur District, Karnataka, India”, Volume 10, Issue 9, September 2021 DOI
+10.17148/IJARCCE.2021.10902, Certificate#:IJARCCE/2021/91, ISSN (Online) 2278–
+1021 ISSN (Print) 2319–5940</li>
+<li> Dr. Chethan Chandra S Basavaraddi, “E-Health and Telemedicine in Today’s World”,
+International Journal of Advanced Research in Computer and Communication Engineering
+Impact Factor 7.39 Vol. 11, Issue 5, May 2022 DOI: 10.17148/IJARCCE.2022.11521, ISSN
+(O) 2278-1021, ISSN (P) 2319-5940. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, “Prediction of Cardiac Disease Using Machine
+Learning”, International Journal of Advanced Research in Computer and Communication
+Engineering ISO 3297:2007 Certified Impact Factor 7.39 Vol. 11, Issue 9, September 2022DOI:
+10.17148/IJARCCE.2022.11915. </li>
+<li> Dr. Chethan Chandra S Basavaraddi,”E-Health Web Application Framework and Platform
+Based on Cloud Technology”, International Journal of Advanced Research in Computer and
+Communication Engineering ISO 3297:2007 Certified Impact Factor 7.918 Vol. 11,Issue 10,
+October 2022 DOI: 10.17148/IJARCCE.2022.111003. </li>
+<li> Dr. Chethan Chandra S Basavaraddi,”Classifying Social Media Comments Using Machine
+Learning”, International Journal of Advanced Research in Computer and Communication
+Engineering ISO 3297:2007 Certified , Impact Factor 7.918 Vol. 12, Issue 1, January 2023 DOI:
+10.17148/IJARCCE.2023.12113. </li>
+<li> Dr. Chethan Chandra S Basavaraddi,”A Project Work on Water Refilling Management
+System”, International Journal of Advanced Research in Computer and Communication
+Engineering ISO 3297:2007 Certified , Impact Factor 7.918 Vol. 12, Issue 1, January 2023 DOI:
+10.17148/IJARCCE.2023.12134. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Telemedicine and E-Health
+advantages with reference to Prediction of Cardiac Disease in Humans”, in the International
+conference on Advances in Engineering and Technology: ICAET2023 organized by GEC K R
+Pet on 12th and 13th of April 2023. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Efficient and Secure
+Apartment Visitor Management System”, in the International conference on Advances in
+Engineering and Technology: ICAET2023 organized by GEC K R Pet on 12th and 13th of April
+2023. </li>
+<li>Dr. Chethan Chandra S Basavaraddi, has presented the paper “A Project Work on Computer
+Vision Based Indoor Navigation System”, in the International Advanced Research Journal
+in Science, Engineering and Technology ISO 3297:2007 Certified Impact Factor
+8.066 Peer-reviewed / Refereed journal Vol. 10, Issue 5, May 2023 DOI:
+10.17148/IARJSET.2023.10561, ISSN (O) 2393-8021, ISSN (P) 2394-1588 </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “A Project Work on Efficient and
+Intelligent Decision Making for Eco-Fertilization”, in the International Advanced Research
+Journal in Science, Engineering and Technology ISO 3297:2007 Certified Impact Factor
+8.066 Peer-reviewed / Refereed journal Vol. 10, Issue 5, May 2023 DOI:
+10.17148/IARJSET.2023.10559, ISSN (O) 2393-8021, ISSN (P) 2394-1588. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Leveraging Machine Learning
+Techniques for Improving Heart Disease Prediction Systems Using Feature Selection”, in the
+International Journal of INTELLIGENT SYSTEMS AND APPLICATIONS IN ENGINEERING,
+Submitted: 20/04/2023 Revised: 17/06/2023 Accepted: 27/06/2023, ISSN:2147-67992147-6799
+www.ijisae.org, IJISAE, 2023, 11(8s), 560–567. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Multilayer Perceptron for Brain
+Image Classification using Stationary Wavelets”, Second International Conference on Augmented
+Intelligence and Sustainable Systems (ICAISS 2023) on 23-25 August 2023, organized by CARE College
+of Engineering, Trichy, India DVD Part Number: CFP23CB2-DVD: IEEE Explore Compliant ISBN : 979-
+8-3503-2579-9 ©2023 IEEE. https://icaiss.in/2023/. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Optimizing Water Distribution
+Pump Scheduling with SVM-Based Machine Learning Using IoT Sensor Data”, International
+Conference On Smart Technologies for smart Nation (Smart Tech Con 2023 IEEE Singapore
+Section) held at Amity Global Institute, Singapore during 18-19 August 2023, https://smarttechconference.org/2023/. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Dynamic Patient Triage 
+Optimization in Healthcare Settings Using RNNs for Decision Support”, "The 10th International 
+Conference on Smart Computing and Communication (ICSCC 2024) IEEE" on 25 - 27 July 2024 in Bali, 
+Indonesia, 979-8-3503-6310-4/24/$31.00 ©2024 IEEE. </li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Smart Personal Protective
+Equipment in Ambulance Services with IoT Integration for Safety”, International Conference
+On Smart Technologies for smart Nation (Smart Tech Con 2023 IEEE Singapore Section) held
+at Amity Global Institute, Singapore during 18-19 August 2023, https://smarttechconference.org/2023/.</li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Enhancing Air Travel with IoT:
+Smart Airports and Passenger Experience”, Proceedings of the Seventh International
+Conference on Electronics, Communication and Aerospace Technology (ICECA 2023) IEEE
+Xplore Part Number : CFP23J88-ART ; ISBN : 979-8-3503-4060-0.</li>
+<li> Dr. Chethan Chandra S Basavaraddi, has presented the paper “Dynamic Patient Triage 
+Optimization in Healthcare Settings Using RNNs for Decision Support”, "The 10th International 
+Conference on Smart Computing and Communication (ICSCC 2024) IEEE" on 25 - 27 July 2024 in Bali, 
+Indonesia, 979-8-3503-6310-4/24/$31.00 ©2024 IEEE.</li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li> 
+<li> </li>
+<li> </li>
+<li> </li>
+<li> </li>
+          </ol>
+        </div>
+        <li>NAAC , NIRF Chief Coordinator, KIT Titpur</li>
+        <li>NBA- Department Coordinator, KIT Titpur</li>
+      </ul>
+
+      <h3 class="section-title">Professional Experience</h3>
+      <ul>
+        <li>Associate Professor, Dept. of CSE – G M University (2025–Present)</li>
+        <li>Associate Professor (AI & ML) – Don Bosco Institute of Technology, Bangalore (2024–25)</li>
+        <li>Associate / Assistant Professor – Kalpataru Institute of Technology, Tiptur (2012–2024)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function togglePapers() {
+      const list = document.getElementById("papersList");
+      list.style.display = (list.style.display === "none" || list.style.display === "") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
+

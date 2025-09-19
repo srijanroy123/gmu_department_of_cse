@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Nayana K - Assistant Professor, CSE Department</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg,  #fdbb2d, #b21f1f,#1a2a6c);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+        
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header-text h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .photo-section {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-photo {
+            width: 280px;
+            height: 320px;
+            background-color: #e9ecef;
+            border: 3px solid #1a2a6c;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #6c757d;
+            font-style: italic;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .content-section {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: #1a2a6c;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: #b21f1f;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        li:before {
+            content: "•";
+            color: #b21f1f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        a {
+            color: #1a2a6c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #b21f1f;
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: #b21f1f;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background-color: #1a2a6c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .link-button:hover {
+            background-color: #b21f1f;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .two-column > div {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .contact-info {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .contact-info h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header .logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> 
+            <img src="CSE logo (2).png" alt="CSE Logo" class="logo">
+            <div class="header-text">
+                <h1>Computer Science and Engineering</h1>
+                <h2>GM University, Davangere</h2>
+            </div>
+        </div>
+        
+        <div class="profile-container">
+            <div class="photo-section">
+                <div class="profile-photo">
+                    <img src="Nayana K 2.jpg" alt="Prof. Nayana K">
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> nayanak@gmu.ac.in</p>
+                    <p><i class="fas fa-briefcase"></i> Assistant Professor</p>
+                    <p><i class="fas fa-graduation-cap"></i> Program Director, M.Tech-Deep Learning</p>
+                    <a href="https://www.linkedin.com/in/nayana-k-921205371" class="link-button">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="section">
+                    <h2 class="section-title"><i class="fas fa-user-graduate"></i> Profile</h2>
+                    <p>Prof. Nayana K is an Assistant Professor in the Department of Computer Science & Engineering at GM University, Davanagere. She joined GMU on January 2, 2023, with nearly 16 years of experience in academics, research, and administration, gained at PESITM, Shivamogga, and SCT Institute of Technology, Bengaluru.</p>
+                    
+                    <p>At GMU, she also serves as the Program Director for M.Tech in Deep Learning. She is responsible for overseeing and coordinating all academic activities of the program, including curriculum planning, course delivery, student mentoring, research facilitation, and ensuring overall academic excellence. Additionally, she is the Reporter from School of Computer Science and Technology (SCST) for GMU Times, the university's quarterly campus magazine, which highlights academic, cultural, and research activities.</p>
+                    
+                    <p>Prof. Nayana K is also actively engaged in critical academic areas such as Academic Co-coordinator, Research coordinator for Centre of Excellence AIML, Technical Seminar coordinator, BOS member for PG programs.</p>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Educational Background</h2>
+                    <ul>
+                        <li><span class="highlight">Ph.D. (Pursuing):</span> Computer Science and Engineering from Visvesvaraya Technological University (VTU), Belagavi. Research domain: Deep Learning with thesis title "ECG Anomaly Detection using LSTM Autoencoder and SHAP for Explainability" at PES College of Engineering, Mandya.</li>
+                        <li><span class="highlight">M.Tech:</span> Information and Communication Technology (ICT) in Computer Science and Engineering from VTU, Belagavi in 2011 at SJCE Mysore.</li>
+                        <li><span class="highlight">B.E.:</span> Electronics and Communication Engineering from VTU in 2007 at GSSSITW, Mysore.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="two-column">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-book"></i> Research & Teaching</h2>
+                <p>Prof. Nayana K specializes in Artificial Intelligence, Machine Learning and Deep Learning. Her research has resulted in publications and funded project from VTU under the KSCST Research Grant scheme. She has attended various workshops and FDP's in the Research field.</p>
+                
+                <p>She has taught courses across undergraduate and postgraduate programs including:</p>
+                <ul>
+                    <li>Deep Learning with Lab</li>
+                    <li>Machine Learning with lab</li>
+                    <li>Artificial intelligence and Machine Learning with Lab</li>
+                    <li>Web Technology with Lab</li>
+                    <li>IOT with Lab</li>
+                    <li>LATEX</li>
+                    <li>Data analytics using Excel</li>
+                    <li>Database Management System</li>
+                    <li>Microprocessors, Logic design, Electronics Circuits</li>
+                    <li>Computer organization, System Software, Operating System</li>
+                    <li>Computer Networks, Information and Network security</li>
+                    <li>Storage area Network, Embedded Computing System</li>
+                    <li>Hardware Description Language</li>
+                    <li>C programming for problem solving</li>
+                    <li>Information Theory and Coding</li>
+                </ul>
+                
+                <p>All subjects are diverse and Interdisciplinary in nature.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> Leadership & Contributions</h2>
+                <ul>
+                    <li><span class="highlight">Program Director:</span> M.Tech in Deep Learning program at GM University</li>
+                    <li><span class="highlight">Academic Roles:</span>
+                        <ul>
+                            <li>Academic Co-coordinator</li>
+                            <li>Research coordinator for Centre of Excellence AIML</li>
+                            <li>Technical Seminar coordinator</li>
+                            <li>BOS member for PG programs</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight">University Magazine:</span> Reporter from School of Computer Science and Technology (SCST) for GMU Times, the university's quarterly campus magazine</li>
+                    <li><span class="highlight">Research:</span> Funded project from VTU under the KSCST Research Grant scheme</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="two-column">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-file-alt"></i> Research Focus</h2>
+                <ul>
+                    <li>Deep Learning applications in healthcare, particularly ECG anomaly detection</li>
+                    <li>Explainable AI using SHAP (SHapley Additive exPlanations)</li>
+                    <li>LSTM Autoencoders for time-series data analysis</li>
+                    <li>Artificial Intelligence and Machine Learning methodologies</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-award"></i> Professional Recognition</h2>
+                <ul>
+                    <li>Research grant recipient under KSCST Research Grant scheme from VTU</li>
+                    <li>Active participation in workshops and Faculty Development Programs</li>
+                    <li>Nearly 16 years of experience in academics, research, and administration</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="two-column">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-users"></i> Professional Affiliations</h2>
+                <ul>
+                    <li>Life Member of Indian Society for Technical Education (ISTE), Bangalore, India</li>
+                    <li>Member for Association for Computing Machinery (ACM) student chapter</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching Philosophy</h2>
+                <p>Prof. Nayana K believes in creating an interactive learning environment that bridges theoretical concepts with practical applications. Her approach emphasizes hands-on experience with cutting-edge technologies in AI and Deep Learning, while fostering research-oriented thinking among students. She is committed to mentoring students to become proficient in both foundational knowledge and emerging technologies in computer science.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-link"></i> Professional Links</h2>
+            <p>
+                <a href="https://www.linkedin.com/in/nayana-k-921205371" class="link-button">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="mailto:nayanak@gmu.ac.in" class="link-button">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 GM University, Davangere | Department of Computer Science and Engineering</p>
+        </div>
+    </div>
+</body>
+</html>

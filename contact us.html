@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CSE Department</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 30px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg,#fdbb2d, #b21f1f, #1a2a6c);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+        
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header-text h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a2a6c;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            border-radius: 2px;
+        }
+        
+        .intro {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #1a2a6c;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: #1a2a6c;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: #b21f1f;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: #b21f1f;
+        }
+        
+        .benchmarking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .benchmark-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #1a2a6c;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .benchmark-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benchmark-title {
+            font-weight: bold;
+            color: #1a2a6c;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 10px;
+        }
+        
+        .benchmark-title i {
+            margin-right: 10px;
+            color: #b21f1f;
+            font-size: 20px;
+        }
+        
+        .benchmark-content {
+            flex-grow: 1;
+        }
+        
+        .benchmark-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+        
+        .benchmark-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .benchmark-list li:before {
+            content: "•";
+            color: #b21f1f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #1a2a6c;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header .logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .benchmarking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Us Styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #1a2a6c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: white;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+        }
+        
+        .contact-card h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+            color: #555;
+            flex-grow: 1;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .contact-link:hover {
+            background: linear-gradient(135deg, #b21f1f, #1a2a6c);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(178, 31, 31, 0.3);
+        }
+        
+        .department-hours {
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .hour-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .hour-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            background: #1a2a6c;
+            color: white;
+        }
+        
+        .hour-text {
+            flex-grow: 1;
+        }
+        
+        .hour-text strong {
+            color: #1a2a6c;
+        }
+        
+        .map-container {
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .map-placeholder {
+            height: 300px;
+            background: linear-gradient(135deg, #e9ecef, #dee2e6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .quick-contact {
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-note {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #fdbb2d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> 
+            <img src="CSE logo (2).png" alt="CSE Logo" class="logo">
+            <div class="header-text">
+                <h1>Computer Science and Engineering</h1>
+                <h2>GM University, Davangere</h2>
+            </div>
+        </div>
+        
+        <h1 class="page-title">Contact Us</h1>
+        
+        <div class="intro">
+            <p>We're here to assist you with any questions regarding our programs, admissions, or department activities. Feel free to reach out to us through any of the following channels, and our team will be happy to help you.</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Academic Enquiries</h3>
+                    <div class="contact-info">
+                        <p>For all academic-related questions, course information, and program details:</p>
+                        <p class="highlight">hod.cse@gmu.edu</p>
+                    </div>
+                    <a href="mailto:hod.cse@gmu.edu" class="contact-link">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Admission Enquiries</h3>
+                    <div class="contact-info">
+                        <p>For information about admissions, eligibility, and application process:</p>
+                        <p class="highlight">admissions.cse@gmu.edu</p>
+                    </div>
+                    <a href="mailto:admissions.cse@gmu.edu" class="contact-link">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Marketing Team</h3>
+                    <div class="contact-info">
+                        <p>For outreach programs, collaborations, and promotional activities:</p>
+                        <p class="highlight">+91 9876543210</p>
+                        <p class="highlight">marketing.cse@gmu.edu</p>
+                    </div>
+                    <a href="tel:+919876543210" class="contact-link">Call Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="department-hours">
+            <h2 class="section-title"><i class="fas fa-clock"></i> Department Hours</h2>
+            
+            <div class="hours-grid">
+                <div class="hour-item">
+                    <div class="hour-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="hour-text">
+                        <strong>Monday - Friday</strong><br>
+                        9:00 AM - 5:00 PM
+                    </div>
+                </div>
+                
+                <div class="hour-item">
+                    <div class="hour-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="hour-text">
+                        <strong>Saturday</strong><br>
+                        9:00 AM - 1:00 PM
+                    </div>
+                </div>
+                
+                <div class="hour-item">
+                    <div class="hour-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <div class="hour-text">
+                        <strong>Sunday</strong><br>
+                        Closed
+                    </div>
+                </div>
+                
+                <div class="hour-item">
+                    <div class="hour-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="hour-text">
+                        <strong>Faculty Availability</strong><br>
+                        By appointment
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-contact">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> Additional Contacts</h2>
+            
+            <div class="benchmarking-grid">
+                <div class="benchmark-card">
+                    <div class="benchmark-title">
+                        <i class="fas fa-user-tie"></i> Head of Department
+                    </div>
+                    <div class="benchmark-content">
+                        <p>Dr.Shivanagowda GM</p>
+                        <p><i class="fas fa-envelope"></i> hod.cse@gmu.edu</p>
+                        <p><i class="fas fa-phone"></i> +91 9876543211</p>
+                    </div>
+                </div>
+                
+                <div class="benchmark-card">
+                    <div class="benchmark-title">
+                        <i class="fas fa-chalkboard-teacher"></i> Academic Coordinator
+                    </div>
+                    <div class="benchmark-content">
+                        <p>Dr.Shivanagowda GM</p>
+                        <p><i class="fas fa-envelope"></i> hod.cse@gmu.edu</p>
+                        <p><i class="fas fa-phone"></i> +91 9876543212</p>
+                    </div>
+                </div>
+                
+            
+            
+            <div class="contact-note">
+                <p class="highlight"><i class="fas fa-info-circle"></i> For urgent matters outside office hours, please email us and we will respond as soon as possible. For current students, please use your student portal for fastest response.</p>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Find Us</h2>
+            <p>Our department is located in the Tech Complex building on the main campus of GM University. Feel free to visit us during office hours.</p>
+            
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i> Map of GM University Campus
+            </div>
+            
+            <div class="benchmark-list" style="margin-top: 20px;">
+                <li><strong>Address:</strong> Computer Science Department, Tech Complex, GM University, Davangere - 577002, Karnataka</li>
+                <li><strong>Campus Directions:</strong> Enter through Main Gate, proceed to Main Building 1st Floor</li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
